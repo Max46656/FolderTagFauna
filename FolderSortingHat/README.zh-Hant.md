@@ -1,4 +1,4 @@
-# FolderSortingHat
+# FolderSortingHat [![Static Badge](https://img.shields.io/badge/lang-en-red)](https://github.com/Max46656/FolderTagFauna/blob/main/FolderSortingHat/README.md)
 
 ## 簡介
 
