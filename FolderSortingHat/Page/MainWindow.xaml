@@ -1,0 +1,104 @@
+<Window x:Class="FolderSortingHat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FolderSortingHat"
+        mc:Ignorable="d"
+        Title="Folder Sorting Hat"
+        Height="600"
+        Width="800">
+  <!-- <Window.DataContext>
+    <viewmodels:MainViewModel/>
+  </Window.DataContext> -->
+  <Grid Margin="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="139*"/>
+      <RowDefinition Height="259*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition/>
+      <ColumnDefinition Width="Auto"
+                        MinWidth="86"/>
+    </Grid.ColumnDefinitions>
+
+    <TextBlock Text="動物資料夾位置："
+               Grid.Column="0"
+               VerticalAlignment="Center"
+               Height="19"/>
+    <TextBox Text="{Binding SourceFolderPath}"
+             Grid.Row="0"
+             Grid.Column="1"
+             Margin="5,5,5,5"/>
+    <Button Content="瀏覽"
+            Command="{Binding BrowseSourceFolderCommand}"
+            Grid.Row="0"
+            Grid.Column="2"
+            Margin="7,5,8,5"/>
+
+    <TextBlock Text="棲息地資料夾位置："
+               Grid.Row="1"
+               Grid.Column="0"
+               VerticalAlignment="Center"
+               Height="19"/>
+    <TextBox Text="{Binding DestFolderPath}"
+             Grid.Row="1"
+             Grid.Column="1"
+             Margin="5,5,5,5"/>
+    <Button Content="瀏覽"
+            Command="{Binding BrowseDestFolderCommand}"
+            Grid.Row="1"
+            Grid.Column="2"
+            Margin="7,5,8,5"/>
+
+    <TextBlock Text="棲息地地圖位置："
+               Grid.Row="2"
+               Grid.Column="0"
+               VerticalAlignment="Center"
+               Height="19"/>
+    <TextBox Text="{Binding TagCSVPath}"
+             Grid.Row="2"
+             Grid.Column="1"
+             Margin="5,5,5,5"/>
+    <Button Content="瀏覽"
+            Command="{Binding BrowseTagCSVCommand}"
+            Grid.Row="2"
+            Grid.Column="2"
+            Margin="7,5,8,5"/>
+
+    <Button Content="建立棲息地地圖"
+            Command="{Binding ScanDestFolderPath}"
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="38,23,342,17"/>
+    <CheckBox Content="重新建立棲息地地圖"
+              IsChecked="{Binding IsRescanDestFolder}"
+              Grid.Row="3"
+              Grid.Column="1"
+              Margin="304,3,1,5"/>
+    <Button Content="遷徙開始"
+            Command="{Binding OrganizeFoldersCommand}"
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="304,23,5,5"/>
+
+    <ProgressBar IsIndeterminate="{Binding IsOrganizing}"
+                 Grid.Row="5"
+                 Margin="10,10,10,108"
+                 RenderTransformOrigin="0.5,0.51"
+                 Grid.ColumnSpan="3"/>
+    <TextBlock Text="{Binding StatusMessage}"
+               Grid.Row="5"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               Margin="5,36,5,5"
+               Grid.RowSpan="2"/>
+
+  </Grid>
+</Window>
