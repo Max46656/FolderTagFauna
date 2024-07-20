@@ -1,4 +1,4 @@
-# FolderSortingHat [![Static Badge](https://img.shields.io/badge/lang-zh--tw-green)](https://github.com/Max46656/FolderTagFauna/blob/main/README.zh-Hant.md)
+# FolderSortingHat [![Static Badge](https://img.shields.io/badge/lang-zh--tw-green)](https://github.com/Max46656/FolderTagFauna/blob/main/FolderSortingHat/README.zh-Hant.md)
 
 
 ## Introduction
