@@ -1,4 +1,4 @@
-# FolderTagFauna [![Static Badge](https://img.shields.io/badge/lang-en-red)](https://github.com/Max46656/FolderTagFauna/blob/main/README.zh-Hant.md)
+# FolderTagFauna [![Static Badge](https://img.shields.io/badge/lang-zh_tw-green)](https://github.com/Max46656/FolderTagFauna/blob/main/README.zh-Hant.md)
 
 ## Introduction
 
